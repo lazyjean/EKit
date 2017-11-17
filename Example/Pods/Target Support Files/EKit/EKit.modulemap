@@ -1,0 +1,6 @@
+framework module EKit {
+  umbrella header "EKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
