@@ -10,7 +10,12 @@ import UIKit
 @IBDesignable
 public class EStar: UIView {
     
-    @IBInspectable public var starCount: Int = 0
+    @IBInspectable public var starCount: Int = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
     @IBInspectable public var starIcon: UIImage?
     @IBInspectable public var spacing: CGFloat = 0
     @IBInspectable public var starSize: CGSize = .zero
