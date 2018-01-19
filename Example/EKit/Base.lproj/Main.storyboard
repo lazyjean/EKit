@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,52 +21,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-cU-Iim" customClass="RoundView" customModule="EKit">
-                                <rect key="frame" x="20" y="40" width="335" height="100"/>
-                                <color key="backgroundColor" red="0.5" green="0.74815848210000002" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="tih-hC-w0L"/>
-                                </constraints>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gX3-xj-euf">
+                                <rect key="frame" x="20" y="40" width="335" height="326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-cU-Iim" customClass="RoundView" customModule="EKit">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
+                                        <color key="backgroundColor" red="0.5" green="0.74815848210000002" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="tih-hC-w0L"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krP-2r-Wdu" customClass="RoundImageView" customModule="EKit">
+                                        <rect key="frame" x="0.0" y="110" width="335" height="102"/>
+                                        <color key="backgroundColor" red="0.4823529412" green="0.67843137249999996" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="102" id="fLC-Yz-9gA"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-WP-mHC" customClass="RoundButton" customModule="EKit">
+                                        <rect key="frame" x="0.0" y="222" width="335" height="44"/>
+                                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="CmU-id-6BZ"/>
+                                        </constraints>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odQ-LY-z6w" customClass="EStar" customModule="EKit">
+                                        <rect key="frame" x="0.0" y="276" width="335" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wWM-JO-q1r"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="starIcon" value="single_star"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCh-hh-x4q" customClass="EStar" customModule="EKit">
+                                <rect key="frame" x="20" y="376" width="140" height="23"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="starIcon" value="single_star"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="10"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krP-2r-Wdu" customClass="RoundImageView" customModule="EKit">
-                                <rect key="frame" x="20" y="160" width="335" height="102"/>
-                                <color key="backgroundColor" red="0.4823529412" green="0.67843137249999996" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="102" id="fLC-Yz-9gA"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-WP-mHC" customClass="RoundButton" customModule="EKit">
-                                <rect key="frame" x="20" y="282" width="335" height="44"/>
-                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="CmU-id-6BZ"/>
-                                </constraints>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DWc-WP-mHC" firstAttribute="top" secondItem="krP-2r-Wdu" secondAttribute="bottom" constant="20" id="Bj4-qg-aSB"/>
-                            <constraint firstAttribute="trailing" secondItem="DWc-WP-mHC" secondAttribute="trailing" constant="20" id="Gmf-Zl-4av"/>
-                            <constraint firstItem="DWc-WP-mHC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="LGZ-vx-g9a"/>
-                            <constraint firstItem="krP-2r-Wdu" firstAttribute="top" secondItem="xAz-cU-Iim" secondAttribute="bottom" constant="20" id="VGS-Eu-PUq"/>
-                            <constraint firstAttribute="trailing" secondItem="krP-2r-Wdu" secondAttribute="trailing" constant="20" id="Ydh-Ul-nzN"/>
-                            <constraint firstAttribute="trailing" secondItem="xAz-cU-Iim" secondAttribute="trailing" constant="20" id="gWp-7y-nfX"/>
-                            <constraint firstItem="krP-2r-Wdu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="kMd-zD-8jb"/>
-                            <constraint firstItem="xAz-cU-Iim" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="lNP-df-co3"/>
-                            <constraint firstItem="xAz-cU-Iim" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="ygS-dM-4C1"/>
+                            <constraint firstAttribute="trailing" secondItem="gX3-xj-euf" secondAttribute="trailing" constant="20" id="0jG-Cq-0Mx"/>
+                            <constraint firstItem="sCh-hh-x4q" firstAttribute="top" secondItem="gX3-xj-euf" secondAttribute="bottom" constant="10" id="VwG-gj-NQe"/>
+                            <constraint firstItem="sCh-hh-x4q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="jhF-CF-dSL"/>
+                            <constraint firstItem="gX3-xj-euf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="oxH-N0-RSJ"/>
+                            <constraint firstItem="gX3-xj-euf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="pJu-Ck-LxJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -75,4 +105,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="single_star" width="24" height="23"/>
+    </resources>
 </document>
