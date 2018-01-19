@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17F780E09C18AA292FEA34515F21F1ED /* EKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4DE17DF423E418C518E763032D5DB /* EKit-dummy.m */; };
+		0044DC1D4DD4014433D7509951F702B7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E289AA4D0D9226E7F32A6BCF3715F7 /* RoundButton.swift */; };
+		0D9569A35A013E5EA96AE1BB39697394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		1E7F76AF17F0B86FA533032F139E458E /* Pods-EKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F52020473B4B9FE03AE6D31506B26B7 /* Pods-EKit_Example-dummy.m */; };
-		222D07B6AEDD98AEC5D604F8D0A35E3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		24C647C71561C4937D4FE247162989C3 /* EKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 011A8D66223C505DF7300A0C685F1F95 /* EKit-dummy.m */; };
 		280EEC8DC52C8DD71C686C244947D892 /* Pods-EKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6207D5F29C838DD60F46DB5283098C0A /* Pods-EKit_Tests-dummy.m */; };
 		2908ECBAC649D7AC57EB98522501EC7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		3376A22BF4BA9D1639A701A20F849851 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD0C16D68848B37BB86FE685264413 /* RoundButton.swift */; };
-		3E4D23A93CB63046593BA2FBADE0EA0D /* EKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3968970E8FA44FB7C3CBD71A0B35501 /* EKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4273E3FB6C59DD64D93634939292D02D /* EStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8F25F0BAD9C5A1BD19AC31D145AE4 /* EStar.swift */; };
 		75B7EE87462855BD7F37AC7225578B03 /* Pods-EKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6201D725761997130DD4EB9FD1F51569 /* Pods-EKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		882742109BA8C3B71C505D834EF1A2CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		A47EFD0774197A1DA91D910422D732B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		AE52FBFA19BA0EB6DB40C4821A0D578C /* Pods-EKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C09D2ECA188625A62B5EFAA155B9D5CA /* Pods-EKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D782604B7CB6F5FBF146B6B26EC66C71 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087B2773BE90A227556EDA7509B0C100 /* RoundImageView.swift */; };
-		DBBC11233D7B4B58DD3A702883123E07 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241193027F5167AF6BB3775C00652F0 /* RoundView.swift */; };
+		B509D45F292AB52E00D3D11136C12C40 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA273F60CE68B5CE751DEC6695FEAF /* RoundLabel.swift */; };
+		B7F07821E33381EA20A44CC2422BB68B /* EKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 709AD6D9C4539513F2B9DBBC1235920D /* EKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DC8D02A11F47BA7AA768FFED5C4088 /* EStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547BC67753ACABF68FC0E84CD2A2B21A /* EStar.swift */; };
+		D40C10C81AF681391A0B776C209D6272 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535D0F7095BB1A04EA10371D7D9D5EEE /* RoundView.swift */; };
+		E855D2216B9B927D4763D658DCCAD498 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		F5C33829E34508868BD3995DF9750FBB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6400E54285A9A1A79471FB787B46BA4 /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,44 +29,45 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 050B4C5CCCB677A92723F82068C0512A;
+			remoteGlobalIDString = E43D5B76BC0AFD93FEF9842704066E60;
 			remoteInfo = EKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		087B2773BE90A227556EDA7509B0C100 /* RoundImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundImageView.swift; path = EKit/RoundImageView.swift; sourceTree = "<group>"; };
+		011A8D66223C505DF7300A0C685F1F95 /* EKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EKit-dummy.m"; sourceTree = "<group>"; };
 		0EDCC9CD9C510AB67E8933D53CD6F48B /* Pods-EKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0F119CE0260A850F289DFABFC416E610 /* Pods-EKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		151C4AB3D42E65053058215809687E95 /* EKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EKit.modulemap; sourceTree = "<group>"; };
 		2579718BC69E4A767AE2F09422AD300E /* Pods-EKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		36A2FF8D162528E428F11D63BBDB9272 /* Pods-EKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EKit_Example.modulemap"; sourceTree = "<group>"; };
 		380A0448E3B3DA2E086FB15C3F72055F /* Pods-EKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3DD4DE17DF423E418C518E763032D5DB /* EKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EKit-dummy.m"; sourceTree = "<group>"; };
 		4162DFA1FD9F7D55A2C8089F1320C878 /* Pods_EKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EKit_Example.framework; path = "Pods-EKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8060DAAE297F954F3F9E3C19FA9559 /* Pods-EKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4CD4A43DF020E678F31E47D8A14F0E19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		535D0F7095BB1A04EA10371D7D9D5EEE /* RoundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = EKit/RoundView.swift; sourceTree = "<group>"; };
+		547BC67753ACABF68FC0E84CD2A2B21A /* EStar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EStar.swift; path = EKit/EStar.swift; sourceTree = "<group>"; };
 		615F8EF08F15FCCC454669DCEBF979CB /* Pods-EKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6201D725761997130DD4EB9FD1F51569 /* Pods-EKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6207D5F29C838DD60F46DB5283098C0A /* Pods-EKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		65E289AA4D0D9226E7F32A6BCF3715F7 /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = EKit/RoundButton.swift; sourceTree = "<group>"; };
+		6BEA273F60CE68B5CE751DEC6695FEAF /* RoundLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = EKit/RoundLabel.swift; sourceTree = "<group>"; };
+		6E53D81A2B734900D7EFC0A0EF149204 /* EKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EKit.modulemap; sourceTree = "<group>"; };
+		6F1C3E91E56D35D3A675D983EBF91DF7 /* EKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EKit.xcconfig; sourceTree = "<group>"; };
+		709AD6D9C4539513F2B9DBBC1235920D /* EKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EKit-umbrella.h"; sourceTree = "<group>"; };
 		7F52020473B4B9FE03AE6D31506B26B7 /* Pods-EKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EKit_Example-dummy.m"; sourceTree = "<group>"; };
-		8241193027F5167AF6BB3775C00652F0 /* RoundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundView.swift; path = EKit/RoundView.swift; sourceTree = "<group>"; };
 		84D50B2DCF2047ECC0229680781074E4 /* Pods-EKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EKit_Tests.modulemap"; sourceTree = "<group>"; };
-		89E8F25F0BAD9C5A1BD19AC31D145AE4 /* EStar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EStar.swift; path = EKit/EStar.swift; sourceTree = "<group>"; };
 		8C4F7A32CF13D8A08E82AA2F68028E72 /* Pods-EKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8E294A74918DC468D1F99F1D75A86C3B /* Pods_EKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EKit_Tests.framework; path = "Pods-EKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		918FDDDFDD4F60FDE2A1BD4B7086BCF8 /* EKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EKit.xcconfig; sourceTree = "<group>"; };
+		911EC8209CD21B7694A388DD5C093F76 /* EKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EKit-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC938C614508DF96A92B0AFCD98B76DB /* Pods-EKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKit_Example-resources.sh"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C09D2ECA188625A62B5EFAA155B9D5CA /* Pods-EKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		C6400E54285A9A1A79471FB787B46BA4 /* RoundImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundImageView.swift; path = EKit/RoundImageView.swift; sourceTree = "<group>"; };
 		CF4449197A27F1DBA636A068403187A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8AC1FC31CEAC04463FE5F231A402F1 /* Pods-EKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D3968970E8FA44FB7C3CBD71A0B35501 /* EKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EKit-umbrella.h"; sourceTree = "<group>"; };
-		D760EDB70776AAAF3FE7230ED1BCF776 /* EKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EKit-prefix.pch"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E046AD7801EB45F011976E5D76ED817C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4AD0C16D68848B37BB86FE685264413 /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = EKit/RoundButton.swift; sourceTree = "<group>"; };
+		E7CBAA4495C290B1226C0FEBB23011D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4C5C877C94BDBE1FFF32F5F81651C9 /* Pods-EKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKit_Tests-resources.sh"; sourceTree = "<group>"; };
 		F85EDD014F686A2C1D93967A6FE61181 /* Pods-EKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F9DE2497B6BB75EA6D4D57089C8E771E /* EKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EKit.framework; path = EKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,12 +75,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5535C4691A866A8BFE31F43F65AB9AF8 /* Frameworks */ = {
+		57A6C16A85F76B383F39F84F91714555 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				882742109BA8C3B71C505D834EF1A2CE /* Foundation.framework in Frameworks */,
-				222D07B6AEDD98AEC5D604F8D0A35E3C /* UIKit.framework in Frameworks */,
+				0D9569A35A013E5EA96AE1BB39697394 /* Foundation.framework in Frameworks */,
+				E855D2216B9B927D4763D658DCCAD498 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,31 +103,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10E4A81EBC46B29D075E3667DCA4A2F3 /* Support Files */ = {
+		32DCC9FAEC22C9CA74389BA95637B7A3 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				151C4AB3D42E65053058215809687E95 /* EKit.modulemap */,
-				918FDDDFDD4F60FDE2A1BD4B7086BCF8 /* EKit.xcconfig */,
-				3DD4DE17DF423E418C518E763032D5DB /* EKit-dummy.m */,
-				D760EDB70776AAAF3FE7230ED1BCF776 /* EKit-prefix.pch */,
-				D3968970E8FA44FB7C3CBD71A0B35501 /* EKit-umbrella.h */,
-				4CD4A43DF020E678F31E47D8A14F0E19 /* Info.plist */,
+				5A7C869F885B0C39F56D3EA2CA51F6BE /* EKit */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EKit";
-			sourceTree = "<group>";
-		};
-		3895949AC5B98E081A4735BA52D7FA74 /* EKit */ = {
-			isa = PBXGroup;
-			children = (
-				89E8F25F0BAD9C5A1BD19AC31D145AE4 /* EStar.swift */,
-				E4AD0C16D68848B37BB86FE685264413 /* RoundButton.swift */,
-				087B2773BE90A227556EDA7509B0C100 /* RoundImageView.swift */,
-				8241193027F5167AF6BB3775C00652F0 /* RoundView.swift */,
-				10E4A81EBC46B29D075E3667DCA4A2F3 /* Support Files */,
-			);
-			name = EKit;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -145,23 +128,43 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		45165421AF808F0C84286FF171F8DE27 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E53D81A2B734900D7EFC0A0EF149204 /* EKit.modulemap */,
+				6F1C3E91E56D35D3A675D983EBF91DF7 /* EKit.xcconfig */,
+				011A8D66223C505DF7300A0C685F1F95 /* EKit-dummy.m */,
+				911EC8209CD21B7694A388DD5C093F76 /* EKit-prefix.pch */,
+				709AD6D9C4539513F2B9DBBC1235920D /* EKit-umbrella.h */,
+				E7CBAA4495C290B1226C0FEBB23011D4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EKit";
+			sourceTree = "<group>";
+		};
+		5A7C869F885B0C39F56D3EA2CA51F6BE /* EKit */ = {
+			isa = PBXGroup;
+			children = (
+				547BC67753ACABF68FC0E84CD2A2B21A /* EStar.swift */,
+				65E289AA4D0D9226E7F32A6BCF3715F7 /* RoundButton.swift */,
+				C6400E54285A9A1A79471FB787B46BA4 /* RoundImageView.swift */,
+				6BEA273F60CE68B5CE751DEC6695FEAF /* RoundLabel.swift */,
+				535D0F7095BB1A04EA10371D7D9D5EEE /* RoundView.swift */,
+				45165421AF808F0C84286FF171F8DE27 /* Support Files */,
+			);
+			name = EKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				805EBE88514589F58F898021D6D12E9C /* Development Pods */,
+				32DCC9FAEC22C9CA74389BA95637B7A3 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				88818FA4A2EA1A2DC4A6A5EEBF5CEBCC /* Products */,
 				88E17FCE64FBDDAF416CBD8DBCBFAAD5 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		805EBE88514589F58F898021D6D12E9C /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3895949AC5B98E081A4735BA52D7FA74 /* EKit */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		88818FA4A2EA1A2DC4A6A5EEBF5CEBCC /* Products */ = {
@@ -222,11 +225,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		551F27EF2C3DEC03FC238D786F3D1253 /* Headers */ = {
+		5D23FE6EC3AA9D52E9B068F7362F4D20 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E4D23A93CB63046593BA2FBADE0EA0D /* EKit-umbrella.h in Headers */,
+				B7F07821E33381EA20A44CC2422BB68B /* EKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,23 +252,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		050B4C5CCCB677A92723F82068C0512A /* EKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12A5B022F240AD8E8B444D718A2BB1E2 /* Build configuration list for PBXNativeTarget "EKit" */;
-			buildPhases = (
-				78AD58FC9DD5CD187796CDA19AF1FE1B /* Sources */,
-				5535C4691A866A8BFE31F43F65AB9AF8 /* Frameworks */,
-				551F27EF2C3DEC03FC238D786F3D1253 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EKit;
-			productName = EKit;
-			productReference = F9DE2497B6BB75EA6D4D57089C8E771E /* EKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		9B53E930C548FEDFB6B88B2D9A54667B /* Pods-EKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F111CE569F54841F9827CA16EE10DA9 /* Build configuration list for PBXNativeTarget "Pods-EKit_Example" */;
@@ -301,6 +287,23 @@
 			productReference = 8E294A74918DC468D1F99F1D75A86C3B /* Pods_EKit_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E43D5B76BC0AFD93FEF9842704066E60 /* EKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669126393E5ABE412C3CB6F42691CC36 /* Build configuration list for PBXNativeTarget "EKit" */;
+			buildPhases = (
+				A15A36E202663B7EBC707B1AB197D901 /* Sources */,
+				57A6C16A85F76B383F39F84F91714555 /* Frameworks */,
+				5D23FE6EC3AA9D52E9B068F7362F4D20 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EKit;
+			productName = EKit;
+			productReference = F9DE2497B6BB75EA6D4D57089C8E771E /* EKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -322,7 +325,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				050B4C5CCCB677A92723F82068C0512A /* EKit */,
+				E43D5B76BC0AFD93FEF9842704066E60 /* EKit */,
 				9B53E930C548FEDFB6B88B2D9A54667B /* Pods-EKit_Example */,
 				D9823DEA1AFF5D7A7261BB5CC97580E5 /* Pods-EKit_Tests */,
 			);
@@ -338,15 +341,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78AD58FC9DD5CD187796CDA19AF1FE1B /* Sources */ = {
+		A15A36E202663B7EBC707B1AB197D901 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17F780E09C18AA292FEA34515F21F1ED /* EKit-dummy.m in Sources */,
-				4273E3FB6C59DD64D93634939292D02D /* EStar.swift in Sources */,
-				3376A22BF4BA9D1639A701A20F849851 /* RoundButton.swift in Sources */,
-				D782604B7CB6F5FBF146B6B26EC66C71 /* RoundImageView.swift in Sources */,
-				DBBC11233D7B4B58DD3A702883123E07 /* RoundView.swift in Sources */,
+				24C647C71561C4937D4FE247162989C3 /* EKit-dummy.m in Sources */,
+				C8DC8D02A11F47BA7AA768FFED5C4088 /* EStar.swift in Sources */,
+				0044DC1D4DD4014433D7509951F702B7 /* RoundButton.swift in Sources */,
+				F5C33829E34508868BD3995DF9750FBB /* RoundImageView.swift in Sources */,
+				B509D45F292AB52E00D3D11136C12C40 /* RoundLabel.swift in Sources */,
+				D40C10C81AF681391A0B776C209D6272 /* RoundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +368,7 @@
 		3E881C252419EE5303856A454E7D8800 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EKit;
-			target = 050B4C5CCCB677A92723F82068C0512A /* EKit */;
+			target = E43D5B76BC0AFD93FEF9842704066E60 /* EKit */;
 			targetProxy = 6493FE93B4CD8A436807B4E890396BAA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -396,6 +400,38 @@
 				PRODUCT_NAME = Pods_EKit_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1D82C925CF07FA0CC723B1468118A6A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1C3E91E56D35D3A675D983EBF91DF7 /* EKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EKit/EKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EKit/EKit.modulemap";
+				PRODUCT_NAME = EKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -463,9 +499,9 @@
 			};
 			name = Debug;
 		};
-		384685BA677FED4ACE13745C4A5422AF /* Debug */ = {
+		6111E5A05B8465145A03AC5869257942 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 918FDDDFDD4F60FDE2A1BD4B7086BCF8 /* EKit.xcconfig */;
+			baseConfigurationReference = 6F1C3E91E56D35D3A675D983EBF91DF7 /* EKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -493,38 +529,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		3D109A39BC24099872C242F826055594 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 918FDDDFDD4F60FDE2A1BD4B7086BCF8 /* EKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/EKit/EKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EKit/EKit.modulemap";
-				PRODUCT_NAME = EKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -684,15 +688,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12A5B022F240AD8E8B444D718A2BB1E2 /* Build configuration list for PBXNativeTarget "EKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				384685BA677FED4ACE13745C4A5422AF /* Debug */,
-				3D109A39BC24099872C242F826055594 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -707,6 +702,15 @@
 			buildConfigurations = (
 				81CC3E93EB65057BCBC18A6E7939AB59 /* Debug */,
 				D6F7897DD633F3C7E3F3641E0EFC5835 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		669126393E5ABE412C3CB6F42691CC36 /* Build configuration list for PBXNativeTarget "EKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6111E5A05B8465145A03AC5869257942 /* Debug */,
+				1D82C925CF07FA0CC723B1468118A6A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,5 +1,5 @@
 PODS:
-  - EKit (0.1.2)
+  - EKit (0.2.0)
 
 DEPENDENCIES:
   - EKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  EKit: 330e23084deb94ec3c7caeb0912c7783c41b7ef1
+  EKit: 23ed5c9a67b704300237c207196660bb2a771ab4
 
 PODFILE CHECKSUM: aceaf6514ebe1e32268ea81e0fad0245cc2ecc47
 
