@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-public class RoundImageView: UIImageView {
+open class RoundImageView: UIImageView {
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
@@ -22,7 +22,7 @@ public class RoundImageView: UIImageView {
         clipsToBounds = true
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         setNeedsLayout()
     }
 }

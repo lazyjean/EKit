@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-public class EStar: UIView {
+open class EStar: UIView {
     
     @IBInspectable public var starCount: Int = 0 {
         didSet {
@@ -37,7 +37,7 @@ public class EStar: UIView {
         }
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         if starCount == 0 {
@@ -64,7 +64,7 @@ public class EStar: UIView {
         }
     }
     
-    public override var intrinsicContentSize: CGSize {
+    open override var intrinsicContentSize: CGSize {
         get {
             if let s = starIcon?.size {
                 let t = CGFloat(max(starCount, 1))
@@ -76,7 +76,7 @@ public class EStar: UIView {
         }
     }
     
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         setNeedsLayout()
     }
 }

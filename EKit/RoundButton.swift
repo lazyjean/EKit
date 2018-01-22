@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-public class RoundButton: UIButton {
+open class RoundButton: UIButton {
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
@@ -22,7 +22,7 @@ public class RoundButton: UIButton {
         clipsToBounds = true
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         setNeedsLayout()
     }
 }

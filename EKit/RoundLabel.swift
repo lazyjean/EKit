@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-public class RoundLabel: UILabel {
+open class RoundLabel: UILabel {
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
@@ -22,7 +22,7 @@ public class RoundLabel: UILabel {
         clipsToBounds = true
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         setNeedsLayout()
     }
 }
