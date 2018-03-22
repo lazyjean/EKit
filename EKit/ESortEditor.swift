@@ -112,6 +112,10 @@ open class ESortEditor: UIView {
         }
     }
     
+    public func sorted() -> [String?] {
+        return labels.map({$0.text})
+    }
+    
     override open func prepareForInterfaceBuilder() {
         self.source = ["LiLei", "HanMeimei", "John"]
     }
