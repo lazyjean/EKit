@@ -115,9 +115,7 @@ open class ESortEditor: UIControl {
         labels.sort {$0.center.x < $1.center.x}
         updateLayout()
         
-        if !source.elementsEqual(labels.map({$0.text!})) {
-            self.sendActions(for: .valueChanged)
-        }
+        self.sendActions(for: .valueChanged)
     }
     
     func updateLayout() {
