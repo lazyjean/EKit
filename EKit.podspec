@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EKit'
-  s.version          = '0.3.2'
+  s.version          = '0.3.3'
   s.summary          = 'UIKit的扩展集，初版支持在storyboard上给UIView及其子类配置圆角'
   s.description      = <<-DESC
                         UIKit的扩展集，初版支持在storyboard上给UIView及其子类配置圆角, 后续还会添加其他的各种UI组件进来

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class ESortEditor: UIView {
+open class ESortEditor: UIControl {
    
     public var source: [String] = [] {
         didSet {
@@ -103,15 +103,21 @@ open class ESortEditor: UIView {
     }
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        pickedUpLabel = nil
-        labels.sort {$0.center.x < $1.center.x}
-        updateLayout()
+        finish()
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        finish()
+    }
+    
+    func finish() {
         pickedUpLabel = nil
         labels.sort {$0.center.x < $1.center.x}
         updateLayout()
+        
+        if !source.elementsEqual(labels.map({$0.text!})) {
+            self.sendActions(for: .valueChanged)
+        }
     }
     
     func updateLayout() {
