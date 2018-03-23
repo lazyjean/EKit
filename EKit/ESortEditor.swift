@@ -27,9 +27,11 @@ open class ESortEditor: UIView {
     @IBInspectable public var itemBackgroundColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     @IBInspectable public var fontSize: CGFloat = 14
     @IBInspectable public var textColor: UIColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    @IBInspectable public var cornerRadius: CGFloat = 3
     
     func setupUI() {
         labels.forEach({$0.removeFromSuperview()})
+        labels.removeAll()
         source.forEach { (item) in
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: itemWidth, height: itemHeight))
             label.text = "\(item)"
@@ -39,7 +41,7 @@ open class ESortEditor: UIView {
             label.layer.masksToBounds = true
             label.layer.borderColor = borderColor.cgColor
             label.layer.borderWidth = borderWidth
-            label.layer.cornerRadius = 3
+            label.layer.cornerRadius = cornerRadius
             label.layer.backgroundColor = itemBackgroundColor.cgColor
             labels.append(label)
             addSubview(label)
@@ -101,6 +103,12 @@ open class ESortEditor: UIView {
     }
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        pickedUpLabel = nil
+        labels.sort {$0.center.x < $1.center.x}
+        updateLayout()
+    }
+    
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         pickedUpLabel = nil
         labels.sort {$0.center.x < $1.center.x}
         updateLayout()
