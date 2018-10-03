@@ -72,7 +72,7 @@ open class EStar: UIView {
                 let h = s.height
                 return CGSize(width: w, height: h)
             }
-            return CGSize(width: UIViewNoIntrinsicMetric, height: UIViewNoIntrinsicMetric)
+            return CGSize(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
         }
     }
     

@@ -75,7 +75,7 @@ open class ESortEditor: UIControl {
         for label in labels {
             if let pt = pt, label.frame.contains(pt) {
                 pickedUpLabel = label
-                bringSubview(toFront: label)
+                bringSubviewToFront(label)
                 break
             }
         }
