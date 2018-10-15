@@ -1,5 +1,5 @@
 //
-//  RoundButton.swift
+//  RoundImageView.swift
 //  EKit
 //
 //  Created by 刘真 on 2017/11/17.
@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-open class RoundButton: UIButton {
+open class EImageView: UIImageView {
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius

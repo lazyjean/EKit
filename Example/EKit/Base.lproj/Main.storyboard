@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gX3-xj-euf">
                                 <rect key="frame" x="20" y="40" width="335" height="326"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-cU-Iim" customClass="RoundView" customModule="EKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-cU-Iim" customClass="EView" customModule="EKit">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
                                         <color key="backgroundColor" red="0.5" green="0.74815848210000002" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -39,7 +39,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krP-2r-Wdu" customClass="RoundImageView" customModule="EKit">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krP-2r-Wdu" customClass="EImageView" customModule="EKit">
                                         <rect key="frame" x="0.0" y="110" width="335" height="102"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.67843137249999996" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -51,7 +51,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-WP-mHC" customClass="RoundButton" customModule="EKit">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-WP-mHC" customClass="EButton" customModule="EKit">
                                         <rect key="frame" x="0.0" y="222" width="335" height="44"/>
                                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -113,13 +113,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5W-yN-7FX" customClass="EButton" customModule="EKit">
+                                <rect key="frame" x="12" y="505" width="351" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fy9-bl-0t5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98039215690000003" green="0.56862745100000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoMaxCornerRadius" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gX3-xj-euf" secondAttribute="trailing" constant="20" id="0jG-Cq-0Mx"/>
+                            <constraint firstItem="T5W-yN-7FX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="12" id="2Mj-dF-sGY"/>
                             <constraint firstItem="GXj-yz-NWs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="9Ck-de-xOa"/>
+                            <constraint firstAttribute="trailing" secondItem="T5W-yN-7FX" secondAttribute="trailing" constant="12" id="FNF-Ka-et6"/>
                             <constraint firstAttribute="trailing" secondItem="GXj-yz-NWs" secondAttribute="trailing" constant="16" id="GVN-i1-P9l"/>
                             <constraint firstItem="sCh-hh-x4q" firstAttribute="top" secondItem="gX3-xj-euf" secondAttribute="bottom" constant="10" id="VwG-gj-NQe"/>
+                            <constraint firstItem="T5W-yN-7FX" firstAttribute="top" secondItem="GXj-yz-NWs" secondAttribute="bottom" constant="12" id="a0N-1U-b7Z"/>
                             <constraint firstItem="sCh-hh-x4q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="jhF-CF-dSL"/>
                             <constraint firstItem="gX3-xj-euf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="oxH-N0-RSJ"/>
                             <constraint firstItem="gX3-xj-euf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="pJu-Ck-LxJ"/>
@@ -136,6 +158,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="single_star" width="24" height="23"/>
+        <image name="single_star" width="24.5" height="23.5"/>
     </resources>
 </document>

@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable
 
-open class RoundView: UIView {
+open class EView: UIView {
     
     @IBInspectable var radius: CGFloat = 5 {
         didSet {

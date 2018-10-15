@@ -1,14 +1,14 @@
 //
-//  RoundImageView.swift
+//  RoundLabel.swift
 //  EKit
 //
-//  Created by 刘真 on 2017/11/17.
+//  Created by 刘真 on 11/01/2018.
 //
 
 import UIKit
 
 @IBDesignable
-open class RoundImageView: UIImageView {
+open class ELabel: UILabel {
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
