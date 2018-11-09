@@ -26,7 +26,7 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C9D2DD7FAEE593C9C43E6E1A /* EKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EKit.podspec; path = ../EKit.podspec; sourceTree = "<group>"; };
+		C9D2DD7FAEE593C9C43E6E1A /* EKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EKit.podspec; path = ../EKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D2467FD7C78D8BCD8899A236 /* Pods_EKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E269867565D4DCEB2CFE6657 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E5B73B8FC386184C27421DEA /* Pods-EKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EKit_Example/Pods-EKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
