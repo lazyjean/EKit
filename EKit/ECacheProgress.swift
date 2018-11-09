@@ -53,6 +53,14 @@ open class ECacheProgress: UIControl {
     
     public var dragging: Bool = false
     
+    public var observedTimes: Array<NSNumber> = [] {
+        didSet {
+            self.addObservedTimeViews()
+        }
+    }
+    
+    private var observedTimeViews: Array<UIView> = []
+    
     //上下缩进去的空立日大
     var progressInsets: UIEdgeInsets = .zero
     
@@ -63,11 +71,12 @@ open class ECacheProgress: UIControl {
             setNeedsLayout()
         }
     }
-    
+
     private var cacheProgressView = UIView()
     private var cacheProgressMask = UIView()
     private var progressView = UIView()
     private var progressMask = UIView()
+    private var observedTimeViewContainer = UIView()
     private var fullView = UIView()
     private var indicator = UIImageView()
     
@@ -80,6 +89,7 @@ open class ECacheProgress: UIControl {
             addSubview(fullView)
             addSubview(cacheProgressMask)
             addSubview(progressMask)
+            addSubview(observedTimeViewContainer)
             addSubview(indicator)
         }
         
@@ -125,6 +135,7 @@ open class ECacheProgress: UIControl {
         fullView.frame = self.bounds.inset(by: self.progressInsets)
         cacheProgressView.frame = fullView.bounds
         cacheProgressMask.frame = fullView.frame
+        observedTimeViewContainer.frame = self.bounds
         
         progressView.frame = fullView.bounds
         progressMask.frame = fullView.frame
@@ -139,6 +150,25 @@ open class ECacheProgress: UIControl {
         
         indicator.frame = CGRect(origin: .zero, size: indicatorSize)
         indicator.center = CGPoint(x: progressMask.frame.maxX, y: progressMask.frame.midY)
+        
+        //self.addObserveredTimeViews()
+    }
+    
+    func addObservedTimeViews() {
+        for view in observedTimeViews {
+            view.removeFromSuperview()
+        }
+        observedTimeViews.removeAll()
+        
+        let mViews = NSMutableArray.init()
+        for time in observedTimes {
+            let width = self.frame.width * CGFloat(time.floatValue) - self.frame.height/2
+            let v = UIView.init(frame:CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height));
+            v.backgroundColor = UIColor.init(red: 0, green: 0.478, blue: 1, alpha: 1)
+            observedTimeViewContainer.addSubview(v)
+            mViews.add(v)
+        }
+        observedTimeViews = mViews as! Array<UIView>
     }
     
     var touching: UITouch?
