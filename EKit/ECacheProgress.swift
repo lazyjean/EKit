@@ -53,7 +53,7 @@ open class ECacheProgress: UIControl {
     
     public var dragging: Bool = false
     
-    public var observedTimes: Array<NSNumber> = [] {
+    public var observedTimes: [CGFloat] = [] {
         didSet {
             self.addObservedTimeViews()
         }
@@ -162,7 +162,7 @@ open class ECacheProgress: UIControl {
         
         let mViews = NSMutableArray.init()
         for time in observedTimes {
-            let width = self.frame.width * CGFloat(time.floatValue) - self.frame.height/2
+            let width = self.frame.width * CGFloat(time) - self.frame.height/2
             let v = UIView.init(frame:CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height));
             v.backgroundColor = UIColor.init(red: 0, green: 0.478, blue: 1, alpha: 1)
             observedTimeViewContainer.addSubview(v)
