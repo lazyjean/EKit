@@ -151,7 +151,14 @@ open class ECacheProgress: UIControl {
         indicator.frame = CGRect(origin: .zero, size: indicatorSize)
         indicator.center = CGPoint(x: progressMask.frame.maxX, y: progressMask.frame.midY)
         
-        //self.addObserveredTimeViews()
+        if observedTimes.count == observedTimeViews.count  {
+            for index in 0..<observedTimes.count {
+                let view = observedTimeViews[index];
+                let time = observedTimes[index];
+                let width = self.frame.width * time - self.frame.height/2
+                view.frame = CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height)
+            }
+        }
     }
     
     func addObservedTimeViews() {
@@ -162,7 +169,7 @@ open class ECacheProgress: UIControl {
         
         let mViews = NSMutableArray.init()
         for time in observedTimes {
-            let width = self.frame.width * CGFloat(time) - self.frame.height/2
+            let width = self.frame.width * time - self.frame.height/2
             let v = UIView.init(frame:CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height));
             v.backgroundColor = UIColor.init(red: 0, green: 0.478, blue: 1, alpha: 1)
             observedTimeViewContainer.addSubview(v)

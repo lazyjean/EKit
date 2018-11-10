@@ -20,8 +20,17 @@ class ViewController: UIViewController {
         sortEditor.source = ["LiLei", "HanMeimei", "John"]
 //        sortEditor.addTarget(self, action: #selector(valueChanged:), for: .valueChanged)
         sortEditor.addTarget(self, action: #selector(valueChanged(sender:)), for: .valueChanged)
-        
+        cacheProgress.backgroundColor = UIColor.red
         cacheProgress.observedTimes = [0.1, 0.2, 0.5, 0.8]
+        
+        let ep = ECacheProgress.init(frame: CGRect.init(x: 50, y: self.view.frame.height-100, width: self.view.frame.width-100, height: 20))
+        ep.progress = 0.5
+        ep.cacheProgress = 0.8
+        ep.observedTimes = [0.1, 0.2, 0.9]
+        ep.backgroundColor = UIColor.red
+        self.view.addSubview(ep)
+        
+        cacheProgress.observedTimes = [0.5, 0.8]
     }
     
     @objc func valueChanged(sender: Any) {
