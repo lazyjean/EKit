@@ -158,6 +158,8 @@ open class ECacheProgress: UIControl {
                 let width = self.frame.width * time - self.frame.height/2
                 view.frame = CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height)
             }
+        } else {
+            self.addObservedTimeViews()
         }
     }
     
