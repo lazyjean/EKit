@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         sortEditor.source = ["LiLei", "HanMeimei", "John"]
-//        sortEditor.addTarget(self, action: #selector(valueChanged:), for: .valueChanged)
         sortEditor.addTarget(self, action: #selector(valueChanged(sender:)), for: .valueChanged)
         cacheProgress.backgroundColor = UIColor.red
         cacheProgress.observedTimes = [0.1, 0.2, 0.5, 0.8]
@@ -31,10 +30,23 @@ class ViewController: UIViewController {
         self.view.addSubview(ep)
         
         cacheProgress.observedTimes = [0.5, 0.8]
+        
+        cacheProgress.addTarget(self, action: #selector(dragBar(sender:)), for: .valueChanged)
+        cacheProgress.addTarget(self, action: #selector(dragInside(sender:)), for: .touchDragInside)
     }
     
     @objc func valueChanged(sender: Any) {
         print(sortEditor.sorted())
+    }
+    
+    @objc func dragBar(sender: Any) {
+        let ep = sender as! ECacheProgress
+        print("drag bar \(ep.progress)")
+    }
+    
+    @objc func dragInside(sender: Any) {
+        let ep = sender as! ECacheProgress
+        print("drag inside \(ep.progress)")
     }
 }
 

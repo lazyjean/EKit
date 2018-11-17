@@ -204,6 +204,8 @@ open class ECacheProgress: UIControl {
         DispatchQueue.main.asyncAfter(wallDeadline: time, execute: item)
         
         self.moveTrackBar = item
+        
+        self.sendActions(for: .touchDragInside)
     }
     
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0FB1BF4382818E75C85A9ADCA9BF4124 /* ESegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E7650307582D0653D86285398F61F1 /* ESegment.swift */; };
-		1AD4A22E1A3F5AECA668ADD4F7CD93EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		1E7F76AF17F0B86FA533032F139E458E /* Pods-EKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6FD021927012A9864E1303A8450347 /* Pods-EKit_Example-dummy.m */; };
 		203FA37AAC1E8706A11BE16E79D3F6EA /* EKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7809CE0DEE69E712F205A993B4D86FC /* EKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2908ECBAC649D7AC57EB98522501EC7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		3278941A99877DCE406E66395261EA54 /* ESegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1C5E409AE2C0BB7BB377DDED46A70 /* ESegmentViewController.swift */; };
 		39313CDB13B4AD77B2E0EF09C977C69B /* EView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A91A3C59936A0D8F0017024F73E495C /* EView.swift */; };
 		4CC7CA6DCF7E3CE9BF2E2F785C7FD1ED /* EStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EFB25A5064827AA7F4E81A59BEF085 /* EStar.swift */; };
 		4CDE792817CF0B9C7BF89021D31284EA /* ELabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A0623123C08B343E12D4DDD0BC7D /* ELabel.swift */; };
+		7C67C64B51528DC5D41714634098F943 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
 		A517387A2B5AC3D5AC2F08C45903373C /* EKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E514C18C723A51AB2C66C77BC9734DBE /* EKit-dummy.m */; };
+		A58D6AB1CFA313F4392CC2C947B42228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		AE24F5F0607C0443B9758CF0A96D892D /* ESortEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DFC9C0C01476AEA000A1573118400 /* ESortEditor.swift */; };
 		AE52FBFA19BA0EB6DB40C4821A0D578C /* Pods-EKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AAA53D16BDD0655E1E925599FF4B113 /* Pods-EKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2A3A223D752C9641016B027BC6D90BD /* ECacheProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C8942E525C420B6E8DCA42B60DE6F3 /* ECacheProgress.swift */; };
-		D4E21C3A727CE4AEAF6239E771AC7CBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		B2E497222D3417BF7933DE7832600B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		F4B491E558C40EF7BD93E60DFB379024 /* EButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264F8A788C4327DE34B6CE4CEB870FF /* EButton.swift */; };
 		FF754DFD57B785DAD15AC4790C3DDFC0 /* EImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7EC423445DDA4FEE92C5E0B01ED442 /* EImageView.swift */; };
 /* End PBXBuildFile section */
@@ -53,14 +53,14 @@
 		63A59737E42DD66D7E15E204E6C6DECC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		78E7650307582D0653D86285398F61F1 /* ESegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ESegment.swift; path = EKit/ESegment.swift; sourceTree = "<group>"; };
 		83B3A0623123C08B343E12D4DDD0BC7D /* ELabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ELabel.swift; path = EKit/ELabel.swift; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3EFB25A5064827AA7F4E81A59BEF085 /* EStar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EStar.swift; path = EKit/EStar.swift; sourceTree = "<group>"; };
 		B473BE46A097ADFB6FFDF8613BCEC443 /* Pods-EKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B86D6BF36BCC3B20D23BEE5837643A13 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C0BC0565E28242D795F7AA1BC5FC2A6B /* Pods-EKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EKit_Example-resources.sh"; sourceTree = "<group>"; };
 		CFFF7EA5B516A7EC621E65310376F1A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DA6FD021927012A9864E1303A8450347 /* Pods-EKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EKit_Example-dummy.m"; sourceTree = "<group>"; };
 		DF7EC423445DDA4FEE92C5E0B01ED442 /* EImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EImageView.swift; path = EKit/EImageView.swift; sourceTree = "<group>"; };
 		E3C8942E525C420B6E8DCA42B60DE6F3 /* ECacheProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECacheProgress.swift; path = EKit/ECacheProgress.swift; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD4A22E1A3F5AECA668ADD4F7CD93EA /* Foundation.framework in Frameworks */,
-				D4E21C3A727CE4AEAF6239E771AC7CBA /* UIKit.framework in Frameworks */,
+				B2E497222D3417BF7933DE7832600B9E /* Foundation.framework in Frameworks */,
+				7C67C64B51528DC5D41714634098F943 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2908ECBAC649D7AC57EB98522501EC7C /* Foundation.framework in Frameworks */,
+				A58D6AB1CFA313F4392CC2C947B42228 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +98,15 @@
 				9A9907AA1C2AA8D48693D1067117B258 /* Pods-EKit_Example */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		115F75D013D6FE5AE56C392CBA188241 /* Support Files */ = {
@@ -117,18 +126,9 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		6B2616FE69C104406ADA6DB104B60E37 /* Products */ = {
