@@ -19,7 +19,7 @@ open class EButton: UIButton {
         }
     }
     
-    //设置连框
+    //设置边框
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth

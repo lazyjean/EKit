@@ -18,9 +18,33 @@ open class EView: UIView {
         }
     }
     
+    //设置边框
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor = UIColor.clear {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+            setNeedsLayout()
+        }
+    }
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = radius
-        clipsToBounds = true
+        
+        clipsToBounds = layer.cornerRadius > 0
+        
+        //设置边框
+        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = borderWidth
+    }
+    
+    override open func prepareForInterfaceBuilder() {
+        setNeedsLayout()
     }
 }

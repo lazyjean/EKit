@@ -79,6 +79,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCh-hh-x4q" customClass="EStar" customModule="EKit">
                                 <rect key="frame" x="20" y="376" width="140" height="23"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="oUq-3c-Cfr"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="starIcon" value="single_star"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -132,10 +135,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autoMaxCornerRadius" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-QH-CD8" customClass="ECacheProgress" customModule="EKit">
-                                <rect key="frame" x="20" y="592" width="343" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-QH-CD8" customClass="ECacheProgress" customModule="EKit">
+                                <rect key="frame" x="16" y="565" width="343" height="15"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="6sc-FK-M9b"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.20000000000000001"/>
@@ -156,20 +161,44 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="indicatorImage" value="single_star"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-UC-gbp" customClass="EView" customModule="EKit">
+                                <rect key="frame" x="148" y="592" width="79" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.63529411759999999" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="VKi-ft-LSc"/>
+                                    <constraint firstAttribute="height" constant="45" id="vxS-Hu-XrD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.58039215690000001" green="0.41568627450000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gX3-xj-euf" secondAttribute="trailing" constant="20" id="0jG-Cq-0Mx"/>
                             <constraint firstItem="T5W-yN-7FX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="12" id="2Mj-dF-sGY"/>
                             <constraint firstItem="GXj-yz-NWs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="9Ck-de-xOa"/>
+                            <constraint firstItem="Qhp-UC-gbp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9EU-Ov-oa0"/>
                             <constraint firstAttribute="trailing" secondItem="T5W-yN-7FX" secondAttribute="trailing" constant="12" id="FNF-Ka-et6"/>
                             <constraint firstAttribute="trailing" secondItem="GXj-yz-NWs" secondAttribute="trailing" constant="16" id="GVN-i1-P9l"/>
                             <constraint firstItem="sCh-hh-x4q" firstAttribute="top" secondItem="gX3-xj-euf" secondAttribute="bottom" constant="10" id="VwG-gj-NQe"/>
+                            <constraint firstAttribute="trailing" secondItem="4AZ-QH-CD8" secondAttribute="trailing" constant="16" id="WUX-oD-ySz"/>
                             <constraint firstItem="T5W-yN-7FX" firstAttribute="top" secondItem="GXj-yz-NWs" secondAttribute="bottom" constant="12" id="a0N-1U-b7Z"/>
                             <constraint firstItem="sCh-hh-x4q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="jhF-CF-dSL"/>
                             <constraint firstItem="gX3-xj-euf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="oxH-N0-RSJ"/>
                             <constraint firstItem="gX3-xj-euf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="pJu-Ck-LxJ"/>
+                            <constraint firstItem="Qhp-UC-gbp" firstAttribute="top" secondItem="4AZ-QH-CD8" secondAttribute="bottom" constant="12" id="puu-US-Vw6"/>
+                            <constraint firstItem="4AZ-QH-CD8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="uSR-zd-Ibg"/>
                             <constraint firstItem="GXj-yz-NWs" firstAttribute="top" secondItem="sCh-hh-x4q" secondAttribute="bottom" constant="16" id="uXG-gc-EBp"/>
+                            <constraint firstItem="4AZ-QH-CD8" firstAttribute="top" secondItem="T5W-yN-7FX" secondAttribute="bottom" constant="16" id="vuk-3p-8uv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -183,6 +212,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="single_star" width="24" height="23"/>
+        <image name="single_star" width="24.5" height="23.5"/>
     </resources>
 </document>
