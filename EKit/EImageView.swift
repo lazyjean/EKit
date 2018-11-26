@@ -8,7 +8,9 @@
 import UIKit
 
 @IBDesignable
+
 open class EImageView: UIImageView {
+    
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
@@ -16,9 +18,24 @@ open class EImageView: UIImageView {
         }
     }
     
+    //最大圆角
+    @IBInspectable var autoMaxCornerRadius: Bool = false {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
     open override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = radius
+        
+        //当设置了自动最大圆角时，忽略普通的圆角设设置
+        if autoMaxCornerRadius {
+            let maxSide = min(layer.frame.width, layer.frame.height)
+            layer.cornerRadius = maxSide/2.0
+        } else {
+            layer.cornerRadius = radius
+        }
+        
         clipsToBounds = true
     }
     
