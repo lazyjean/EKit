@@ -97,6 +97,8 @@ open class EView: UIView {
             self.gradientLayer.transform = CATransform3DMakeRotation(gradientAngle/180*CGFloat.pi, 0, 0, 1)
             self.gradientLayer.frame = self.bounds
         }
+        
+        self.subviews.forEach({[weak self] in self?.bringSubviewToFront($0)})
     }
     
     override open func prepareForInterfaceBuilder() {
