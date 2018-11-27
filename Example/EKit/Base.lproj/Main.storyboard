@@ -170,33 +170,43 @@
                                     <constraint firstAttribute="height" constant="45" id="vxS-Hu-XrD"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.60931867360000003" green="0.6347113848" blue="0.99126583339999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
-                                        <color key="value" red="0.73725490196078436" green="0.60784313725490191" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="1" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
-                                        <color key="value" red="0.53725490196078429" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="3" height="3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="gradient" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientColor1">
-                                        <color key="value" red="0.53725490200000003" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientColor2">
-                                        <color key="value" red="0.73725490199999999" green="0.60784313729999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="gradientAngle">
                                         <real key="value" value="90"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="gradient" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autoMaxCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBT-73-Yk2" customClass="EImageView" customModule="EKit">
-                                <rect key="frame" x="147.5" y="489" width="80" height="80"/>
+                                <rect key="frame" x="147.5" y="493" width="80" height="80"/>
                                 <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="4Qu-eX-Ft8"/>
@@ -207,7 +217,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gX3-xj-euf" secondAttribute="trailing" constant="20" id="0jG-Cq-0Mx"/>
                             <constraint firstItem="T5W-yN-7FX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="12" id="2Mj-dF-sGY"/>
@@ -215,7 +225,7 @@
                             <constraint firstItem="Qhp-UC-gbp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9EU-Ov-oa0"/>
                             <constraint firstAttribute="trailing" secondItem="T5W-yN-7FX" secondAttribute="trailing" constant="12" id="FNF-Ka-et6"/>
                             <constraint firstAttribute="trailing" secondItem="GXj-yz-NWs" secondAttribute="trailing" constant="16" id="GVN-i1-P9l"/>
-                            <constraint firstItem="lBT-73-Yk2" firstAttribute="top" secondItem="Qhp-UC-gbp" secondAttribute="bottom" constant="8" id="SLg-9w-ikA"/>
+                            <constraint firstItem="lBT-73-Yk2" firstAttribute="top" secondItem="Qhp-UC-gbp" secondAttribute="bottom" constant="12" id="SLg-9w-ikA"/>
                             <constraint firstItem="sCh-hh-x4q" firstAttribute="top" secondItem="gX3-xj-euf" secondAttribute="bottom" constant="10" id="VwG-gj-NQe"/>
                             <constraint firstAttribute="trailing" secondItem="4AZ-QH-CD8" secondAttribute="trailing" constant="16" id="WUX-oD-ySz"/>
                             <constraint firstItem="lBT-73-Yk2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ZI7-tS-hGl"/>
@@ -231,6 +241,7 @@
                     </view>
                     <connections>
                         <outlet property="cacheProgress" destination="4AZ-QH-CD8" id="eqH-Uh-oYN"/>
+                        <outlet property="shadowView" destination="Qhp-UC-gbp" id="ZhA-0H-nWe"/>
                         <outlet property="sortEditor" destination="GXj-yz-NWs" id="3Nu-v8-U9l"/>
                     </connections>
                 </viewController>

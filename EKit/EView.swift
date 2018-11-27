@@ -14,7 +14,6 @@ open class EView: UIView {
     @IBInspectable var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
-            clipsToBounds = true
         }
     }
     
@@ -65,6 +64,38 @@ open class EView: UIView {
         }
     }
     
+    //添加阴影
+    @IBInspectable var shadow: Bool = false {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor = UIColor.black {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize = .zero {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float = 0 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
+    
+    //私有方法
     lazy var gradientLayer: CAGradientLayer = { [unowned self] in
         let layer = CAGradientLayer()
         layer.colors = [self.gradientColor1.cgColor, self.gradientColor2.cgColor]
@@ -73,7 +104,7 @@ open class EView: UIView {
         layer.transform = CATransform3DMakeRotation(gradientAngle/180*CGFloat.pi, 0, 0, 1)
         self.layer.addSublayer(layer)
         return layer
-    }()
+        }()
     
     open override func layoutSubviews() {
         super.layoutSubviews()
@@ -86,16 +117,32 @@ open class EView: UIView {
             layer.cornerRadius = radius
         }
         
-        clipsToBounds = layer.cornerRadius > 0
-        
         //设置边框
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
+        layer.masksToBounds = layer.borderWidth > 0
         
         if self.gradient {
             self.gradientLayer.colors = [self.gradientColor1.cgColor, self.gradientColor2.cgColor]
             self.gradientLayer.transform = CATransform3DMakeRotation(gradientAngle/180*CGFloat.pi, 0, 0, 1)
             self.gradientLayer.frame = self.bounds
+            self.gradientLayer.masksToBounds = true
+            
+            if autoMaxCornerRadius {
+                let maxSide = min(layer.frame.width, layer.frame.height)
+                self.gradientLayer.cornerRadius = maxSide/2.0
+            } else {
+                self.gradientLayer.cornerRadius = radius
+            }
+        }
+        
+        //设置阴影效果
+        if self.shadow {
+            layer.shadowColor = self.shadowColor.cgColor
+            layer.shadowOffset = self.shadowOffset
+            layer.shadowRadius = self.shadowRadius
+            layer.shadowOpacity = self.shadowOpacity
+            layer.masksToBounds = false
         }
         
         self.subviews.forEach({[weak self] in self?.bringSubviewToFront($0)})

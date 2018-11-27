@@ -13,6 +13,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var sortEditor: ESortEditor!
     @IBOutlet weak var cacheProgress: ECacheProgress!
+    @IBOutlet weak var shadowView: EView!
+    @IBOutlet weak var shadow: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,6 +37,12 @@ class ViewController: UIViewController {
         
         cacheProgress.addTarget(self, action: #selector(dragBar(sender:)), for: .valueChanged)
         cacheProgress.addTarget(self, action: #selector(dragInside(sender:)), for: .touchDragInside)
+        
+//        self.shadow.layer.shadowColor = UIColor.red.cgColor
+//        self.shadow.layer.shadowRadius = 5
+//        self.shadow.layer.shadowOpacity = 1
+//        self.shadow.layer.shadowOffset = CGSize(width: 3, height: 
+//        self.shadow.layer.masksToBounds = true
     }
     
     @objc func valueChanged(sender: Any) {
