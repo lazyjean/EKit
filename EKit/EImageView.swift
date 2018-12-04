@@ -11,7 +11,7 @@ import UIKit
 
 open class EImageView: UIImageView {
     
-    @IBInspectable var radius: CGFloat = 5 {
+    @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
             clipsToBounds = true
@@ -19,7 +19,7 @@ open class EImageView: UIImageView {
     }
     
     //最大圆角
-    @IBInspectable var autoMaxCornerRadius: Bool = false {
+    @IBInspectable public var autoMaxCornerRadius: Bool = false {
         didSet {
             setNeedsLayout()
         }

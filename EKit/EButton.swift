@@ -11,7 +11,7 @@ import UIKit
 open class EButton: UIButton {
     
     //设置半径
-    @IBInspectable var radius: CGFloat = 5 {
+    @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
             clipsToBounds = true
@@ -20,14 +20,14 @@ open class EButton: UIButton {
     }
     
     //设置边框
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.clear {
+    @IBInspectable public var borderColor: UIColor = UIColor.clear {
         didSet {
             layer.borderColor = borderColor.cgColor
             setNeedsLayout()
@@ -35,7 +35,7 @@ open class EButton: UIButton {
     }
     
     //最大圆角
-    @IBInspectable var autoMaxCornerRadius: Bool = false {
+    @IBInspectable public var autoMaxCornerRadius: Bool = false {
         didSet {
             setNeedsLayout()
         }

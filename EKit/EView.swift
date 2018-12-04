@@ -11,21 +11,21 @@ import UIKit
 
 open class EView: UIView {
     
-    @IBInspectable var radius: CGFloat = 5 {
+    @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
         }
     }
     
     //设置边框
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.clear {
+    @IBInspectable public var borderColor: UIColor = UIColor.clear {
         didSet {
             layer.borderColor = borderColor.cgColor
             setNeedsLayout()
@@ -33,63 +33,63 @@ open class EView: UIView {
     }
 
     //最大圆角
-    @IBInspectable var autoMaxCornerRadius: Bool = false {
+    @IBInspectable public var autoMaxCornerRadius: Bool = false {
         didSet {
             setNeedsLayout()
         }
     }
     
     //过渡色
-    @IBInspectable var gradient: Bool = false {
+    @IBInspectable public var gradient: Bool = false {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var gradientColor1: UIColor = UIColor.white {
+    @IBInspectable public var gradientColor1: UIColor = UIColor.white {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var gradientColor2: UIColor = UIColor.black {
+    @IBInspectable public var gradientColor2: UIColor = UIColor.black {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var gradientAngle: CGFloat = 0 {
+    @IBInspectable public var gradientAngle: CGFloat = 0 {
         didSet {
             setNeedsLayout()
         }
     }
     
     //添加阴影
-    @IBInspectable var shadow: Bool = false {
+    @IBInspectable public var shadow: Bool = false {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowColor: UIColor = UIColor.black {
+    @IBInspectable public var shadowColor: UIColor = UIColor.black {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowOffset: CGSize = .zero {
+    @IBInspectable public var shadowOffset: CGSize = .zero {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowRadius: CGFloat = 0 {
+    @IBInspectable public var shadowRadius: CGFloat = 0 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowOpacity: Float = 0 {
+    @IBInspectable public var shadowOpacity: Float = 0 {
         didSet {
             setNeedsLayout()
         }

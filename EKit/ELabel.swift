@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable
 open class ELabel: UILabel {
-    @IBInspectable var radius: CGFloat = 5 {
+    @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
             clipsToBounds = true
