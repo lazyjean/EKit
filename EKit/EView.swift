@@ -14,6 +14,7 @@ open class EView: UIView {
     @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
+            setNeedsLayout()
         }
     }
     

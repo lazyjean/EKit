@@ -12,7 +12,7 @@ open class ELabel: UILabel {
     @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
-            clipsToBounds = true
+            setNeedsLayout()
         }
     }
     

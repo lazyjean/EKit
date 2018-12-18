@@ -14,7 +14,6 @@ open class EButton: UIButton {
     @IBInspectable public var radius: CGFloat = 5 {
         didSet {
             layer.cornerRadius = radius
-            clipsToBounds = true
             setNeedsLayout()
         }
     }
