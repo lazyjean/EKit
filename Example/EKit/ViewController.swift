@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         
         sortEditor.source = ["LiLei", "HanMeimei", "John"]
         sortEditor.addTarget(self, action: #selector(valueChanged(sender:)), for: .valueChanged)
+        
         cacheProgress.backgroundColor = UIColor.red
         cacheProgress.observedTimes = [0.1, 0.2, 0.5, 0.8]
         
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         ep.progress = 0.5
         ep.cacheProgress = 0.8
         ep.observedTimes = [0.1, 0.2, 0.9]
+        ep.pauseIndicatorImage = #imageLiteral(resourceName: "断点")
         ep.backgroundColor = UIColor.red
         self.view.addSubview(ep)
         

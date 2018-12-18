@@ -45,23 +45,28 @@ open class ECacheProgress: UIControl {
     //缓冲进度条颜色
     @IBInspectable public var cacheTrackColor: UIColor = UIColor.red
     
-    //中间指示图标
+    //进度指示图标
     @IBInspectable public var indicatorImage: UIImage?
     
     //是否显示指示图标
     @IBInspectable public var showIndicator: Bool = false
     
+    //断点图标
+    @IBInspectable public var pauseIndicatorImage: UIImage?
+    
     public var dragging: Bool = false
     
-    public var observedTimes: [CGFloat] = [] {
+    //播放断点，每一个断点的值在0-1之间
+    @IBInspectable public var observedTimes: [CGFloat] = [] {
         didSet {
             self.addObservedTimeViews()
+            setNeedsLayout()
         }
     }
     
-    private var observedTimeViews: Array<UIView> = []
+    private var observedTimeViews: [UIImageView] = []
     
-    //上下缩进去的空立日大
+    //上下缩进去的空间
     var progressInsets: UIEdgeInsets = .zero
     
     @IBInspectable public var progressInsetX: CGFloat = 0 {
@@ -100,6 +105,7 @@ open class ECacheProgress: UIControl {
         progressView.backgroundColor = trackColor
         progressMask.clipsToBounds = true
         indicator.image = indicatorImage
+        observedTimeViewContainer.backgroundColor = .clear
         
         //计算大小
         var contentSize = self.frame.size
@@ -141,7 +147,7 @@ open class ECacheProgress: UIControl {
         progressMask.frame = fullView.frame
         
         var frame = cacheProgressMask.frame
-        frame.size.width = frame.width * cacheProgress
+        frame.size.width = fullView.frame.width * cacheProgress
         cacheProgressMask.frame = frame
         
         frame = progressMask.frame
@@ -151,33 +157,28 @@ open class ECacheProgress: UIControl {
         indicator.frame = CGRect(origin: .zero, size: indicatorSize)
         indicator.center = CGPoint(x: progressMask.frame.maxX, y: progressMask.frame.midY)
         
-        if observedTimes.count == observedTimeViews.count  {
-            for index in 0..<observedTimes.count {
-                let view = observedTimeViews[index];
-                let time = observedTimes[index];
-                let width = self.frame.width * time - self.frame.height/2
-                view.frame = CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height)
-            }
-        } else {
-            self.addObservedTimeViews()
+        //设置断点
+        observedTimes.enumerated().forEach { time in
+            let imageView = self.observedTimeViews[time.offset]
+            imageView.sizeToFit()
+            
+            let x = fullView.frame.width * time.element
+            imageView.center = CGPoint(x: x, y: progressMask.frame.midY)
         }
     }
     
     func addObservedTimeViews() {
+        
         for view in observedTimeViews {
             view.removeFromSuperview()
         }
         observedTimeViews.removeAll()
         
-        let mViews = NSMutableArray.init()
-        for time in observedTimes {
-            let width = self.frame.width * time - self.frame.height/2
-            let v = UIView.init(frame:CGRect.init(x:  width , y: 0, width: self.frame.size.height, height: self.frame.size.height));
-            v.backgroundColor = UIColor.init(red: 0, green: 0.478, blue: 1, alpha: 1)
-            observedTimeViewContainer.addSubview(v)
-            mViews.add(v)
+        observedTimes.forEach { [weak self](idx) in
+            let imageView = UIImageView(image: self!.pauseIndicatorImage)
+            self!.observedTimeViewContainer.addSubview(imageView)
+            self!.observedTimeViews.append(imageView)
         }
-        observedTimeViews = mViews as! Array<UIView>
     }
     
     var touching: UITouch?
@@ -235,6 +236,7 @@ open class ECacheProgress: UIControl {
     }
     
     open override func prepareForInterfaceBuilder() {
-        
+        self.observedTimes = [0.1, 0.5, 0.8]
+        setNeedsLayout()
     }
 }

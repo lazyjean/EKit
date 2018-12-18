@@ -160,6 +160,7 @@
                                         <color key="value" cocoaTouchSystemColor="lightTextColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="indicatorImage" value="single_star"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="pauseIndicatorImage" value="断点"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-UC-gbp" customClass="EView" customModule="EKit">
@@ -252,5 +253,6 @@
     </scenes>
     <resources>
         <image name="single_star" width="24.5" height="23.5"/>
+        <image name="断点" width="5" height="5"/>
     </resources>
 </document>
