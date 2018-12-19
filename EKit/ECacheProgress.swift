@@ -141,7 +141,7 @@ open class ECacheProgress: UIControl {
         fullView.frame = self.bounds.inset(by: self.progressInsets)
         cacheProgressView.frame = fullView.bounds
         cacheProgressMask.frame = fullView.frame
-        observedTimeViewContainer.frame = self.bounds
+        observedTimeViewContainer.frame = fullView.frame
         
         progressView.frame = fullView.bounds
         progressMask.frame = fullView.frame
@@ -166,8 +166,8 @@ open class ECacheProgress: UIControl {
             let imageView = self.observedTimeViews[time.offset]
             imageView.sizeToFit()
             
-            let x = fullView.frame.width * time.element
-            imageView.center = CGPoint(x: x, y: progressMask.frame.midY)
+            let x = observedTimeViewContainer.frame.width * time.element
+            imageView.center = CGPoint(x: x, y: observedTimeViewContainer.frame.midY)
         }
     }
     
