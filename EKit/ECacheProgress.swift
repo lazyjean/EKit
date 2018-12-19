@@ -59,7 +59,7 @@ open class ECacheProgress: UIControl {
     //播放断点，每一个断点的值在0-1之间
     @IBInspectable public var observedTimes: [CGFloat] = [] {
         didSet {
-            self.addObservedTimeViews()
+            self.refreshObservedViews()
             setNeedsLayout()
         }
     }
@@ -158,6 +158,10 @@ open class ECacheProgress: UIControl {
         indicator.center = CGPoint(x: progressMask.frame.maxX, y: progressMask.frame.midY)
         
         //设置断点
+        if observedTimes.count != observedTimeViews.count {
+            self.refreshObservedViews()
+        }
+        
         observedTimes.enumerated().forEach { time in
             let imageView = self.observedTimeViews[time.offset]
             imageView.sizeToFit()
@@ -167,7 +171,7 @@ open class ECacheProgress: UIControl {
         }
     }
     
-    func addObservedTimeViews() {
+    func refreshObservedViews() {
         
         for view in observedTimeViews {
             view.removeFromSuperview()
