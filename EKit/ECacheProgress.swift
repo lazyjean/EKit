@@ -167,7 +167,7 @@ open class ECacheProgress: UIControl {
             imageView.sizeToFit()
             
             let x = observedTimeViewContainer.frame.width * time.element
-            imageView.center = CGPoint(x: x, y: observedTimeViewContainer.frame.midY)
+            imageView.center = CGPoint(x: x, y: observedTimeViewContainer.bounds.midY)
         }
     }
     
