@@ -91,13 +91,13 @@ open class ESortEditor: UIControl {
         label.center = label.center.applying(CGAffineTransform(translationX: pt.x - ppt.x, y: pt.y - ppt.y))
         
         var oldIndex = 0
-        if let label = pickedUpLabel, let idx = labels.index(of: label) {
+        if let label = pickedUpLabel, let idx = labels.firstIndex(of: label) {
             oldIndex = idx
         }
         
         labels.sort {$0.center.x < $1.center.x}
         
-        if let label = pickedUpLabel, let current = labels.index(of: label), current != oldIndex {
+        if let label = pickedUpLabel, let current = labels.firstIndex(of: label), current != oldIndex {
             updateLayout()
         }
     }

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EKit'
-  s.version          = '2.7.3'
+  s.version          = '2.8.0'
   s.summary          = 'UIKit的扩展集，初版支持在storyboard上给UIView及其子类配置圆角'
   s.description      = <<-DESC
                         UIKit的扩展集，初版支持在storyboard上给UIView及其子类配置圆角, 后续还会添加其他的各种UI组件进来
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lazyjean' => 'lazyjean@foxmail.com' }
   s.source           = { :git => 'https://github.com/lazyjean/EKit.git', :tag => s.version.to_s }
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.0'
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'EKit/**/*'
