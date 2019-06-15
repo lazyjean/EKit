@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable
 
-class EImageProgress: UIView {
+open class EImageProgress: UIView {
 
     @IBInspectable public var progress: CGFloat = 0.5 {
         didSet {
