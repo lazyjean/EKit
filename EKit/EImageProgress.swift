@@ -53,7 +53,7 @@ open class EImageProgress: UIView {
         setup()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -64,13 +64,13 @@ open class EImageProgress: UIView {
         addSubview(progressImageView)
     }
 
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         fullImageView.frame = self.bounds
 
         progressImageView.frame = CGRect(x: 0, y: 0, width: fullImageView.frame.width * self.progress, height: self.bounds.height)
     }
 
-    override func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         setup()
         setNeedsLayout()
     }
