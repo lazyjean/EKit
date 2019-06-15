@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -217,8 +217,23 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autoMaxCornerRadius" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="056-GW-bYf" customClass="EImageProgress" customModule="EKit">
+                                <rect key="frame" x="165" y="578" width="45" height="13"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="7q0-wo-izt"/>
+                                    <constraint firstAttribute="height" constant="13" id="wOu-JD-BTy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="volume_min"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="progressImage" value="volume_max"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gX3-xj-euf" secondAttribute="trailing" constant="20" id="0jG-Cq-0Mx"/>
                             <constraint firstItem="T5W-yN-7FX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="12" id="2Mj-dF-sGY"/>
@@ -226,6 +241,7 @@
                             <constraint firstItem="Qhp-UC-gbp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9EU-Ov-oa0"/>
                             <constraint firstAttribute="trailing" secondItem="T5W-yN-7FX" secondAttribute="trailing" constant="12" id="FNF-Ka-et6"/>
                             <constraint firstAttribute="trailing" secondItem="GXj-yz-NWs" secondAttribute="trailing" constant="16" id="GVN-i1-P9l"/>
+                            <constraint firstItem="056-GW-bYf" firstAttribute="top" secondItem="lBT-73-Yk2" secondAttribute="bottom" constant="5" id="RMk-iq-7Y0"/>
                             <constraint firstItem="lBT-73-Yk2" firstAttribute="top" secondItem="Qhp-UC-gbp" secondAttribute="bottom" constant="12" id="SLg-9w-ikA"/>
                             <constraint firstItem="sCh-hh-x4q" firstAttribute="top" secondItem="gX3-xj-euf" secondAttribute="bottom" constant="10" id="VwG-gj-NQe"/>
                             <constraint firstAttribute="trailing" secondItem="4AZ-QH-CD8" secondAttribute="trailing" constant="16" id="WUX-oD-ySz"/>
@@ -237,6 +253,7 @@
                             <constraint firstItem="Qhp-UC-gbp" firstAttribute="top" secondItem="4AZ-QH-CD8" secondAttribute="bottom" constant="12" id="puu-US-Vw6"/>
                             <constraint firstItem="4AZ-QH-CD8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="uSR-zd-Ibg"/>
                             <constraint firstItem="GXj-yz-NWs" firstAttribute="top" secondItem="sCh-hh-x4q" secondAttribute="bottom" constant="16" id="uXG-gc-EBp"/>
+                            <constraint firstItem="056-GW-bYf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="v5Z-s1-8Zu"/>
                             <constraint firstItem="4AZ-QH-CD8" firstAttribute="top" secondItem="T5W-yN-7FX" secondAttribute="bottom" constant="16" id="vuk-3p-8uv"/>
                         </constraints>
                     </view>
@@ -253,6 +270,8 @@
     </scenes>
     <resources>
         <image name="single_star" width="24.5" height="23.5"/>
+        <image name="volume_max" width="45" height="13"/>
+        <image name="volume_min" width="45" height="13"/>
         <image name="断点" width="5" height="5"/>
     </resources>
 </document>

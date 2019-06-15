@@ -20,5 +20,6 @@
     "ios": "9.0"
   },
   "source_files": "EKit/**/*",
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "swift_version": "5.0"
 }
