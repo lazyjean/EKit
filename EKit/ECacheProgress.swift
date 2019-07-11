@@ -54,7 +54,7 @@ open class ECacheProgress: UIControl {
     //断点图标
     @IBInspectable public var pauseIndicatorImage: UIImage?
     
-    public var dragging: Bool = false
+    private var dragging: Bool = false
     
     //播放断点，每一个断点的值在0-1之间
     @IBInspectable public var observedTimes: [CGFloat] = [] {
@@ -63,7 +63,10 @@ open class ECacheProgress: UIControl {
             setNeedsLayout()
         }
     }
-    
+
+    //是否支持拽拖进度
+    @IBInspectable public var dragEnable = false
+
     private var observedTimeViews: [UIImageView] = []
     
     //上下缩进去的空间
@@ -185,13 +188,16 @@ open class ECacheProgress: UIControl {
         }
     }
     
-    var touching: UITouch?
-    var timer: Timer?
-    var moveTrackBar: DispatchWorkItem?
+    private var touching: UITouch?
+    private var timer: Timer?
+    private var moveTrackBar: DispatchWorkItem?
     
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
         super.touchesBegan(touches, with: event)
-        
+
+        guard dragEnable else { return }
+
         touching = touches.first
         let item = DispatchWorkItem { [weak self] in
             if let full = self?.fullView, let pt = self?.touching?.location(in: full) {
@@ -214,8 +220,11 @@ open class ECacheProgress: UIControl {
     }
     
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+
         super.touchesBegan(touches, with: event)
-        
+
+        guard dragEnable else { return }
+
         if let item = moveTrackBar, !item.isCancelled {
             item.cancel()
         }
@@ -228,7 +237,10 @@ open class ECacheProgress: UIControl {
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
         super.touchesEnded(touches, with: event)
+
+        guard dragEnable else { return }
         
         if let item = moveTrackBar, !item.isCancelled {
             item.cancel()
