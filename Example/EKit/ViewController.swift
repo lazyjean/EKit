@@ -45,6 +45,14 @@ class ViewController: UIViewController {
 //        self.shadow.layer.shadowOpacity = 1
 //        self.shadow.layer.shadowOffset = CGSize(width: 3, height: 
 //        self.shadow.layer.masksToBounds = true
+
+        if #available(iOS 10.0, *) {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (t) in
+                self.cacheProgress.progress = CGFloat(Int.random(in: 1...100))/100
+            }
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     @objc func valueChanged(sender: Any) {

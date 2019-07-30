@@ -65,7 +65,7 @@ open class ECacheProgress: UIControl {
     }
 
     //是否支持拽拖进度
-    @IBInspectable public var dragEnable = false
+    @IBInspectable public var dragEnable: Bool = false
 
     private var observedTimeViews: [UIImageView] = []
     
