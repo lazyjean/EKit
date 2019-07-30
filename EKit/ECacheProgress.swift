@@ -87,20 +87,33 @@ open class ECacheProgress: UIControl {
     private var observedTimeViewContainer = UIView()
     private var fullView = UIView()
     private var indicator = UIImageView()
-    
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    func setup() {
+        addSubview(fullView)
+
+        cacheProgressMask.addSubview(cacheProgressView)
+        addSubview(cacheProgressMask)
+
+        progressMask.addSubview(progressView)
+        addSubview(progressMask)
+
+        addSubview(observedTimeViewContainer)
+        addSubview(indicator)
+    }
+
     open override func layoutSubviews() {
         super.layoutSubviews()
-        
-        if cacheProgressView.superview == nil, cacheProgressView.superview == nil, fullView.superview == nil, indicator.superview == nil {
-            cacheProgressMask.addSubview(cacheProgressView)
-            progressMask.addSubview(progressView)
-            addSubview(fullView)
-            addSubview(cacheProgressMask)
-            addSubview(progressMask)
-            addSubview(observedTimeViewContainer)
-            addSubview(indicator)
-        }
-        
+                
         //设置view颜色
         fullView.backgroundColor = fullColor
         cacheProgressView.backgroundColor = cacheTrackColor

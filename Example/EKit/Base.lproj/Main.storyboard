@@ -161,6 +161,7 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="indicatorImage" value="single_star"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="pauseIndicatorImage" value="断点"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="dragEnable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-UC-gbp" customClass="EView" customModule="EKit">
